@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>BTG - Better TeleGram</title>
-		<script src="https://kit.fontawesome.com/ab052a6057.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body onload="fetchChats('users')">
-		<div class="messaging-app">
-			<div class="sidebar">
-				<ul class="chat-categories">
-					<li class="active" onclick="toggleCategory(this)" data-chat="users">
-						<i class="fa-regular fa-user"></i>
-					</li>
-					<li onclick="toggleCategory(this)" data-chat="groups">
-						<i class="fa-solid fa-user-group"></i>
-					</li>
-					<li onclick="toggleCategory(this)" data-chat="channels">
-						<i class="fa-solid fa-bullhorn"></i>
-					</li>
-					<li onclick="toggleCategory(this)" data-chat="bots">
-						<i class="fa-solid fa-robot"></i>
-					</li>
-				</ul>
-			</div>
-			<div class="main-content">
-				<div class="chats-container" id="chats-container"></div>
-				<div class="chat-container" id="chat-container">
-					<div class="message-input">
-						<input type="text" />
-						<button>Send</button>
-					</div>
-				</div>
-			</div>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>BTG - Better TeleGram</title>
+    <script src="https://kit.fontawesome.com/ab052a6057.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="fetchChats('users')">
+    <div class="messaging-app">
+      <div class="sidebar">
+        <ul class="chat-categories">
+          <li class="active" onclick="toggleCategory(this)" data-chat="users">
+            <i class="fa-regular fa-user"></i>
+          </li>
+          <li onclick="toggleCategory(this)" data-chat="groups">
+            <i class="fa-solid fa-user-group"></i>
+          </li>
+          <li onclick="toggleCategory(this)" data-chat="channels">
+            <i class="fa-solid fa-bullhorn"></i>
+          </li>
+          <li onclick="toggleCategory(this)" data-chat="bots">
+            <i class="fa-solid fa-robot"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div class="chats-container" id="chats-container"></div>
+        <div class="messages" id="messages">
+          <div class="chat-container" id="chat-container"></div>
+          <div class="message-input">
+            <input type="text" id="sendTXT" />
+            <button id="sendBTN">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<script src="script.js"></script>
-	</body>
+    <script src="script.js"></script>
+  </body>
 </html>
